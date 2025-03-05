@@ -1,0 +1,38 @@
+{
+  "_version": "2.6.0",
+  "_events": [
+    { "_time": 2.458, "_type": 2, "_value": 7, "_floatValue": 1 },
+    { "_time": 2.917, "_type": 3, "_value": 3, "_floatValue": 1 },
+    { "_time": 3.25, "_type": 3, "_value": 3, "_floatValue": 1 },
+    { "_time": 3.5, "_type": 3, "_value": 3, "_floatValue": 1 },
+    { "_time": 3.792, "_type": 3, "_value": 7, "_floatValue": 1 },
+    { "_time": 4.042, "_type": 3, "_value": 7, "_floatValue": 1 },
+    { "_time": 4.25, "_type": 3, "_value": 7, "_floatValue": 1 },
+    { "_time": 4.5, "_type": 3, "_value": 7, "_floatValue": 1 },
+    { "_time": 4.75, "_type": 3, "_value": 7, "_floatValue": 1 },
+    { "_time": 6, "_type": 1, "_value": 7, "_floatValue": 1 },
+    { "_time": 9.083, "_type": 0, "_value": 7, "_floatValue": 1 },
+    { "_time": 9.5, "_type": 4, "_value": 7, "_floatValue": 1 }
+  ],
+  "_notes": [
+    {
+      "_time": 2.461,
+      "_lineIndex": 1,
+      "_lineLayer": 1,
+      "_type": 0,
+      "_cutDirection": 0
+    },
+    {
+      "_time": 2.92,
+      "_lineIndex": 3,
+      "_lineLayer": 1,
+      "_type": 1,
+      "_cutDirection": 3
+    }
+  ],
+  "_obstacles": [],
+  "_waypoints": [],
+  "_sliders": [],
+  "_specialEventsKeywordFilters": {},
+  "_customData": { "_time": 6.082 }
+}

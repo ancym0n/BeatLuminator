@@ -1,0 +1,373 @@
+/* Loading Poppins, settings the fonts and configuring variables */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s;
+
+  --color-background: #1f1f1f;
+  --color-gradient-purple: #db16ff;
+  --color-gradient-blue: #4e5aff;
+  --color-border: #3d3d3d;
+  --color-text: #fff;
+
+  --text-normal: 18px;
+  --text-large: 20px;
+  --text-huge: 32.8px;
+  --border-width: 2.5px;
+
+  --deg-gradient: 180deg;
+}
+
+body {
+  background-color: var(--color-background);
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+span,
+div,
+label,
+button {
+  font-family: "Poppins", serif;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.text-normal {
+  font-size: var(--text-normal);
+}
+.text-large {
+  font-size: var(--text-large);
+}
+.text-huge {
+  font-size: var(--text-huge);
+}
+
+/* Logo */
+
+#logo img,
+#logo h1 {
+  cursor: pointer;
+}
+
+#logo img {
+  aspect-ratio: 1/1;
+  width: 52px;
+  margin-right: 0.5rem;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin-top: 0.5rem;
+  z-index: 20;
+}
+
+/* Styling boxes */
+.box {
+  border: var(--border-width) solid var(--color-border);
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+.upload-box {
+  width: 80%;
+  height: 80%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+}
+
+/* Canvas */
+#canvas {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5vh;
+  height: 85vh;
+}
+
+/* Gradient to text */
+.gradient,
+.gradient-button,
+gradient {
+  background: linear-gradient(
+    var(--deg-gradient),
+    var(--color-gradient-purple),
+    var(--color-gradient-blue)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+gradient {
+  display: inline-block;
+}
+
+/* Gradient buttons */
+
+.gradient-button {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  position: relative;
+  border: none;
+  background-color: red;
+}
+
+.gradient-button::before,
+.gradient-button::after,
+.gradient-button:hover::after {
+  transition: all 0.3s;
+  opacity: 1;
+  border-radius: 0.8rem;
+  background: linear-gradient(
+    var(--deg-gradient),
+    var(--color-gradient-purple),
+    var(--color-gradient-blue)
+  );
+  content: "";
+  width: calc(100% + 2.5px);
+  height: calc(100% + 2.5px);
+  position: absolute;
+  top: calc(-2.5px / 2);
+  left: calc(-2.5px / 2);
+  z-index: -1;
+}
+
+.gradient-button::after {
+  width: 100%;
+  height: 100%;
+  background: var(--color-background);
+  top: 0;
+  left: 0;
+}
+
+.gradient-button:hover::after {
+  filter: blur(10px);
+}
+
+.gradient-button:hover {
+  -webkit-text-fill-color: var(--color-background);
+  color: var(--color-background);
+}
+
+/* Cover */
+.cover {
+  padding: 0;
+  aspect-ratio: 1/1;
+  width: 9.6rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+/* Song detail inputs */
+input {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  outline: none;
+}
+
+label {
+  color: var(--color-border);
+}
+
+label,
+input {
+  display: block;
+  font-size: var(--text-normal);
+}
+
+input[name="mapName"] {
+  width: 60vw;
+}
+
+.authors input {
+  width: 94%;
+}
+
+.authors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-info {
+  display: flex;
+  width: 90vw;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Colorable blocks */
+.colors {
+  text-align: center;
+  margin-left: 1.5rem;
+}
+
+.blocks {
+  display: flex;
+}
+
+.color-block {
+  transition: all 0s;
+  aspect-ratio: 1/1;
+  width: 8.2rem;
+  border-radius: 2rem;
+  position: relative;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.color-block[type="red"] {
+  background-color: red;
+}
+.color-block[type="blue"] {
+  background-color: blue;
+}
+
+.color-block::after {
+  content: "";
+  border-radius: 1.6rem;
+  position: absolute;
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  background-color: #ffffff33;
+  top: 0.5rem;
+  left: 0.5rem;
+}
+
+.color-block::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("./assets/arrow.svg");
+}
+
+/* Second section of settings */
+
+.lower-settings {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  margin-top: 1rem;
+}
+
+/* Config */
+.config {
+  width: 40%;
+  margin-right: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+.config h1 {
+  margin-bottom: 0.6rem;
+}
+.config label {
+  color: var(--color-text);
+}
+.config input {
+  display: inline;
+  margin-bottom: 0.2rem;
+}
+
+.config-button {
+  background-color: var(--color-background);
+  padding: 0.2rem 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 1rem;
+}
+
+.config-button:hover {
+  background-color: var(--color-border);
+}
+
+/* Generate */
+.generate {
+  text-align: center;
+}
+button {
+  cursor: pointer;
+}
+
+/* Loading */
+.loading {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--color-background);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.loadbar {
+  width: 12rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.loaded {
+  position: absolute;
+  width: 34%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-gradient-purple),
+    var(--color-gradient-blue)
+  );
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+}
+
+/* Return to home page */
+#go-back {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+  padding: 0.6rem;
+  position: fixed;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  z-index: 25;
+}
+
+.not-config-button {
+  position: static;
+  transform: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}

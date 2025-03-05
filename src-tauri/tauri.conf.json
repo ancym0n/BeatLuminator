@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "beatluminator",
+  "productName": "BeatLuminator",
   "version": "0.1.0",
   "identifier": "dev.ancymon.beatluminator",
   "build": {

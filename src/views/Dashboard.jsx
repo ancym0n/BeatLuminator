@@ -255,21 +255,31 @@ function Dashboard({ image, mapDetails, setIsUploaded }) {
         <div className="colors box">
           <p className="text-large">Colors</p>
           <div className="blocks">
-            <ColorBlock initialColor="red" colorConfig={config.colors} />
-            <ColorBlock initialColor="blue" colorConfig={config.colors} />
+            <ColorBlock
+              initialColor="red"
+              colorConfig={config ? config.colors : false}
+            />
+            <ColorBlock
+              initialColor="blue"
+              colorConfig={config ? config.colors : false}
+            />
           </div>
         </div>
         <div className="config box">
           <h1 className="text-large">Config</h1>
           <label>
-            <input type="checkbox" gen="ai" defaultChecked={config.aiRemoval} />{" "}
+            <input
+              type="checkbox"
+              gen="ai"
+              defaultChecked={config ? config.aiRemoval : false}
+            />{" "}
             Remove AI traces
           </label>
           <label>
             <input
               type="checkbox"
               gen="lights"
-              defaultChecked={config.lights}
+              defaultChecked={config ? config.lights : true}
             />{" "}
             Generate lights
           </label>

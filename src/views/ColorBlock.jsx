@@ -1,10 +1,13 @@
 import { useRef, useState } from "react";
 
 function ColorBlock({ initialColor, colorConfig }) {
-  let config = initialColor === "red" ? colorConfig.red : colorConfig.blue;
-  initialColor = config
-    ? `rgb(${config[0]}, ${config[1]}, ${config[2]})`
-    : initialColor;
+  let config;
+  if (colorConfig) {
+    config = initialColor === "red" ? colorConfig.red : colorConfig.blue;
+    initialColor = config
+      ? `rgb(${config[0]}, ${config[1]}, ${config[2]})`
+      : initialColor;
+  }
 
   const [bgColor, setBgColor] = useState(initialColor);
   const colorInputRef = useRef(null);
